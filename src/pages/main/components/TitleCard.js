@@ -9,10 +9,10 @@ import * as React from 'react'
 function TitleCard() {
     return (
         <Card sx={{ display: 'flex' }}>
-            <CardContent sx={{ flex: '1 0 auto' }}>
-                <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+            <CardContent sx={{ flex: '1 0' }}>
+                <Stack direction={{xs: 'column'}} spacing={{xs: 4}}>
                     <Box sx={{ display: 'flex', flexDirection: 'row' }}>
-                        <Stack direction={{ xs: 'row' }} spacing={{ xs: 4 }} alignItems="center">
+                        <Stack direction={{ xs: 'row' }} spacing={{ xs: 1, sm: 4 }} alignItems="center">
                             <Avatar sx={{ width: 128, height: 128 }} src='img/5A1F0936-7EC2-4660-9D58-79B11EF5BB48.jpeg' />
                             <Typography component="div" variant="h2">
                                 Tyler Wilcox
@@ -20,13 +20,13 @@ function TitleCard() {
                         </Stack>
                     </Box>
                     <Box sx={{ display: 'flex', flexDirection: 'row' }}>
-                        <Stack direction={{ xs: 'row' }} spacing={{ xs: 4 }}>
+                        <Stack direction={{ xs: 'column', sm: 'row' }} spacing={{ xs: 0, sm: 4 }}>
                             <Typography><LocationOnIcon /> Rochester, NY</Typography>
                             <Typography><WorkIcon /> NetApp Inc.</Typography>
                             <Typography><SchoolIcon /> Rochester Institute of Technology</Typography>
                         </Stack>
                     </Box>
-                </Box>
+                </Stack>
             </CardContent>
         </Card>)
 }

@@ -16,7 +16,7 @@ const experiences = [
         positions: [
             {
                 title: "Software Engineer II",
-                description: "I write code",
+                description: "Full-Stack developer building a scalable WebApp leveraging serverless cloud technologies at its core.",
                 timerange: {
                     start: "Nov 2021",
                     end: "Present"
@@ -28,10 +28,11 @@ const experiences = [
         companyName: 'CloudCheckr',
         iconSrc: 'img/1618582794915.jpg',
         location: 'Rochester, NY',
+        note: 'Acquired by NetApp Inc. in Nov of 2021',
         positions: [
             {
                 title: "Software Engineer Intern",
-                description: "I write code",
+                description: "",
                 timerange: {
                     start: "May 2020",
                     end: "Dec 2020"
@@ -39,7 +40,7 @@ const experiences = [
             },
             {
                 title: "Software Engineer",
-                description: "I write code",
+                description: "",
                 timerange: {
                     start: "Jan 2021",
                     end: "Nov 2021"
@@ -54,7 +55,7 @@ const experiences = [
         positions: [
             {
                 title: "Software Test Engineer Intern",
-                description: "I write code",
+                description: "Quality Assurance developer building robust test suites for a large data ingestion system.",
                 timerange: {
                     start: "May 2018",
                     end: "Dec 2018"
@@ -71,7 +72,7 @@ function ExperienceListing(props) {
 
     return (
         <Box>
-            <Stack direction={{ xs: 'column' }} alignItems="start" spacing={{ xs: 1 }}>
+            <Stack direction={{ xs: 'column' }} alignItems="" spacing={{ xs: 0 }}>
                 <Stack direction={{ xs: 'row' }} spacing={{ xs: 2 }} alignItems='center'>
                     <Avatar sx={{ width: 64, height: 64 }} variant='square' src={listing.iconSrc} />
                     <Stack>
@@ -81,15 +82,15 @@ function ExperienceListing(props) {
                         <Typography component="div" variant="subtitle1">
                             {listing.location}
                         </Typography>
-                        {/* <Typography component="div" variant="subtitle2">
-                            Notes: 
-                        </Typography> */}
+                        {listing.note ? <Typography component="div" variant="subtitle2">
+                            {listing.note}
+                        </Typography> : <></>}
                     </Stack>
                 </Stack>
                 <Stack>
-                    <Timeline position='right'sx={{
+                    <Timeline position='right' sx={{
                         [`& .${timelineOppositeContentClasses.root}`]: {
-                            flex: 0.3,
+                            flex: 0.1,
                         },
                     }}>
 
@@ -124,7 +125,7 @@ function ExperienceListing(props) {
 function ExperienceCard() {
     return (
         <Card sx={{ display: 'flex' }}>
-            <CardContent sx={{ flex: '1 0 auto' }}>
+            <CardContent sx={{ flex: '1 0' }}>
                 <Stack direction={{ xs: 'column' }} spacing={{ xs: 2 }}>
                     <ExperienceListing listing={experiences[0]} />
                     <Divider />

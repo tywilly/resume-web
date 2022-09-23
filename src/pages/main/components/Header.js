@@ -19,7 +19,7 @@ function Header() {
                     align="center"
                     noWrap
                     sx={{ flex: 1 }}>
-                    Title
+                    Home
                 </Typography>
             </Toolbar>
             <Toolbar

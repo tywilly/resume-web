@@ -1,13 +1,12 @@
 import { Box, Container, Typography, Link } from '@mui/material'
+import { Favorite } from '@mui/icons-material';
 import * as React from 'react'
 
 function Copyright() {
     return (
         <Typography variant="body2" color="text.secondary" align="center">
             {'Copyright © '}
-            <Link color="inherit" href="https://mui.com/">
-                Tyler Wilcox
-            </Link>{' '}
+            Tyler Wilcox{' '}
             {new Date().getFullYear()}
             {'.'}
         </Typography>
@@ -17,10 +16,9 @@ function Copyright() {
 
 function Footer() {
     return (
-        <Box component="footer" sx={{ bgcolor: 'background.paper', py: 6 }}>
+        <Box component="footer" sx={{ bgcolor: 'background.default', py: 6 }}>
             <Container maxWidth="lg">
                 <Typography variant="h6" align="center" gutterBottom>
-                    Title
                 </Typography>
                 <Typography
                     variant="subtitle1"
@@ -28,7 +26,14 @@ function Footer() {
                     color="text.secondary"
                     component="p"
                 >
-                    Some descrioption
+                    Made with <Favorite color='error' fontSize='small'/> using{' '}
+                    <Link color="inherit" href="https://mui.com/">
+                        MUI
+                    </Link>{' '}
+                    and{' '}
+                    <Link color="inherit" href="https://reactjs.org/">
+                        React
+                    </Link>{' '}
                 </Typography>
                 <Copyright />
             </Container>
