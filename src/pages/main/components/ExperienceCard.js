@@ -10,16 +10,38 @@ import * as React from 'react'
 
 const experiences = [
     {
+        companyName: "Envative - Smarter Software Solutions",
+        iconSrc: 'img/1567702414518.jpg',
+        location: 'Rochester, NY',
+        positions: [
+            {
+                title: "Full Stack Engineer",
+                description: [
+
+                ],
+                timerange: {
+                    start: "April 2023",
+                    end: "Present"
+                }
+            }
+        ]
+    },
+    {
         companyName: 'NetApp Inc.',
         iconSrc: 'img/1599748887845.jpg',
         location: 'Rochester, NY',
         positions: [
             {
                 title: "Software Engineer II",
-                description: "Full-Stack developer building a scalable WebApp leveraging serverless cloud technologies at its core.",
+                description: [
+                    "Full-Stack developer building a scalable WebApp leveraging serverless cloud technologies at its core.",
+                    "Primary focus in backend development utilizing C# .NET and a Microservice architecture. Also focused on AWS Lambdas in Python, DynamoDB and StepFunctions.",
+                    "Familiarity with React.JS and JavaScript building components using ANT design and Storybook.",
+                    "Assisted with on-boarding and mentoring two team members on technologies and business logic."
+                ],
                 timerange: {
                     start: "Nov 2021",
-                    end: "Present"
+                    end: "April 2023"
                 }
             }
         ]
@@ -31,19 +53,23 @@ const experiences = [
         note: 'Acquired by NetApp Inc. in Nov of 2021',
         positions: [
             {
-                title: "Software Engineer Intern",
-                description: "",
-                timerange: {
-                    start: "May 2020",
-                    end: "Dec 2020"
-                }
-            },
-            {
                 title: "Software Engineer",
-                description: "",
+                description: [
+                    "Began as intern on research and development team, transitioned to full time in December 2020.",
+                    "Worked in a fast paced, agile team environment building a next generation data ingestion pipeline leveraging cloud technologies.",
+                    "Designed, implemented, and maintained features that help customers understand their cloud expenditures."
+                ],
                 timerange: {
                     start: "Jan 2021",
                     end: "Nov 2021"
+                }
+            },
+            {
+                title: "Software Engineer Intern",
+                description: [],
+                timerange: {
+                    start: "May 2020",
+                    end: "Dec 2020"
                 }
             }
         ]
@@ -55,7 +81,7 @@ const experiences = [
         positions: [
             {
                 title: "Software Test Engineer Intern",
-                description: "Quality Assurance developer building robust test suites for a large data ingestion system.",
+                description: ["Quality Assurance developer building robust test suites for a large data ingestion system."],
                 timerange: {
                     start: "May 2018",
                     end: "Dec 2018"
@@ -67,7 +93,6 @@ const experiences = [
 
 
 function ExperienceListing(props) {
-    console.log(props)
     const listing = props.listing;
 
     return (
@@ -111,7 +136,7 @@ function ExperienceListing(props) {
                                     <Typography variant='h6' component='span'>
                                         {position.title}
                                     </Typography>
-                                    <Typography>{position.description}</Typography>
+                                    <Typography><ul>{position.description.map((x) => (<li>{x}</li>))}</ul></Typography>
                                 </TimelineContent>
                             </TimelineItem>
                         ))}

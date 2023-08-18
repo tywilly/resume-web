@@ -4,6 +4,7 @@ import TitleCard from './components/TitleCard'
 import ExperienceCard from './components/ExperienceCard'
 import EducationCard from './components/EducationCard'
 import VolunteerCard from './components/VolunteerCard'
+import CertificationsCard from './components/CertificationsCard'
 
 function Main() {
 
@@ -14,6 +15,7 @@ function Main() {
             <TitleCard />
             <ExperienceCard />
             <EducationCard />
+            <CertificationsCard />
             <VolunteerCard />
         </Stack>
     )
