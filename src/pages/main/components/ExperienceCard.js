@@ -10,6 +10,23 @@ import * as React from 'react'
 
 const experiences = [
     {
+        companyName: "L3Harris Technologies",
+        iconSrc: 'img/l3harris_technologies_logo.jpg',
+        location: 'Rochester, NY',
+        positions: [
+            {
+                title: "Senior Associate, Software Engineer",
+                description: [
+                    "Embedded C++ developer"
+                ],
+                timerange: {
+                    start: "December 2024",
+                    end: "Present"
+                }
+            }
+        ]
+    },
+    {
         companyName: "Envative - Smarter Software Solutions",
         iconSrc: 'img/1567702414518.jpg',
         location: 'Rochester, NY',
@@ -17,11 +34,12 @@ const experiences = [
             {
                 title: "Full Stack Engineer",
                 description: [
-
+                    "Full-Stack developer refactoring a legacy ASP.NET system to Mongo, .NET Core and ReactJS.",
+                    "Embedded developer working with ESP32s and AWS IoT Core."
                 ],
                 timerange: {
                     start: "April 2023",
-                    end: "Present"
+                    end: "December 2024"
                 }
             }
         ]
@@ -157,6 +175,10 @@ function ExperienceCard() {
                     <ExperienceListing listing={experiences[1]}/>
                     <Divider />
                     <ExperienceListing listing={experiences[2]}/>
+                    <Divider />
+                    <ExperienceListing listing={experiences[3]}/>
+                    <Divider />
+                    <ExperienceListing listing={experiences[4]}/>
                 </Stack>
             </CardContent>
         </Card>)

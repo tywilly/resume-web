@@ -22,7 +22,7 @@ function TitleCard() {
                     <Box sx={{ display: 'flex', flexDirection: 'row' }}>
                         <Stack direction={{ xs: 'column', sm: 'row' }} spacing={{ xs: 0, sm: 4 }}>
                             <Typography><LocationOnIcon /> Rochester, NY</Typography>
-                            <Typography><WorkIcon /> Envative</Typography>
+                            <Typography><WorkIcon /> L3Harris Technologies</Typography>
                             <Typography><SchoolIcon /> Rochester Institute of Technology</Typography>
                         </Stack>
                     </Box>
